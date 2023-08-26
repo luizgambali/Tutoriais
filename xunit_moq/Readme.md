@@ -456,3 +456,17 @@ Exemplo 2:
 Exemplo 3:
 		
 		mockObject.Setup(x => x.MetodoAssincrono(It.IsAny<type>)).ReturnsAsync(44);
+
+# Relatorio de Cobertura de Testes
+
+Dentro do projeto de testes, adicionar o seguinte pacote:
+
+dotnet add package coverlet.msbuild
+
+Para rodar os testes e exibir o relatorio de cobertura:
+
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov /p:CoverletOutput=src/Test/lcov.info <<path-do-seu-projeto-de-testes>>
+
+Em caso de problemas, consultar:
+https://medium.com/@lorranpalmeira/code-coverage-no-c-com-vscode-cfa3cb6c89d0
+https://stackoverflow.com/questions/74983417/coverage-gutter-extension-for-visual-studio-code-is-not-showing-line-coverage
