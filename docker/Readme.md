@@ -49,6 +49,12 @@ Exemplos:
 	docker run -d -p 80:80 --name meu-container nginx
 	docker run -d -p 80:80 --name meu-container --rm nginx
 
+	Exemplo NGINX:
+ 
+		docker run -it --rm -d -p 8080:80 --name web nginx 
+
+		para acessar o container: http://localhost:8080
+
 ### docker stop [container-id]
 Encerra a execução de um container que está rodando no momento. [container-id] pode ser o id do container ou o nome dele.
 
